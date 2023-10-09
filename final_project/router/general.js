@@ -41,7 +41,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
       if(book) {
         resolve(res.send(book));
       }
-      reject(res.status(404).json({messgae:"ISBN not found"}));
+      reject(res.status(404).json({message:"ISBN not found"}));
       get_book_isbn.then(function() {
         console.log("Promise for Task 11 resolved");
       }).catch(function() {
